@@ -56,3 +56,8 @@ This system functions as an intelligent document assistant, capable of understan
 
 ## 📝 Note
 The system includes a re-ranking feature using CrossEncoder that can be implemented for improved result relevance.
+
+
+## Example 
+![image](https://github.com/user-attachments/assets/30cfff9a-ba83-42fa-a905-a8b655797486)
+
