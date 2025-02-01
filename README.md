@@ -1,71 +1,58 @@
 # Ollama-Running-DeepSeek-R1-Locally
 
 
-# 📑 RAG with Cross-Encoders Re-ranking Demo Application
+# RAG-Based Document Q&A System
 
-Demo LLM app with RAG for the YouTube video.
+A Retrieval Augmented Generation (RAG) system built with Streamlit that enables intelligent document querying and answering.
 
-🚨 NOTE: **Requires `Python > 3.10` with  `SQLite > 3.35`**
+## 🚀 Features
 
-Watch the video 👇
+### Document Processing
+- Multi-PDF file upload support
+- Text extraction using PyMuPDFLoader
+- Smart text chunking (400 characters with 100 character overlap)
 
-<a href="https://youtu.be/1y2TohQdNbo">
-<img src="https://i.imgur.com/lJUyEm1.png" width="800">
-</a>
+### Vector Storage
+- Implements Chroma DB for vector storage
+- Ollama-based text embeddings
+- Persistent storage with metadata and unique IDs
+- Data stored at './demo-reg-chroma'
 
----
+### Query Processing
+The system processes queries through three main steps:
+1. Vector database search for relevant content
+2. Similar document retrieval
+3. Answer generation using deepseek-r1 language model
 
-### Part II: Watch Optimizing RAG with Semantic Cache ⚡️
+### User Interface
+Built with Streamlit, featuring:
+- PDF upload sidebar
+- Question input field
+- Answer display area
 
-<a href="https://youtu.be/0agBo7_wKTo">
-<img src="https://i.imgur.com/rJJaHmG.png" width="400">
-</a>
+## 🔄 System Flow
 
-🐙 [**Codebase**](https://github.com/yankeexe/llm-rag-with-reranker-demo/tree/semantic-cache)
+## 🤖 AI System Prompt
+The AI assistant is configured to:
+- Utilize only provided context
+- Deliver structured responses
+- Balance comprehensiveness with conciseness
+- Acknowledge information gaps when present
 
+## 🔍 Advanced Features
+- CrossEncoder re-ranking capability (currently commented out)
+- Enhanced result relevance potential
 
-## 🤖 Prerequisites
+## 💡 Overview
+This system functions as an intelligent document assistant, capable of understanding and answering questions based solely on the content of uploaded documents. It combines modern RAG architecture with an intuitive interface for efficient document interaction.
 
-- [Ollama](https://ollama.dev/download)
+## 🛠️ Technical Requirements
+- Python 3.10+
+- Streamlit
+- PyMuPDF
+- Chroma DB
+- Ollama
+- deepseek-r1 model
 
-## 🔨 Setting up locally
-
-Create virtualenv and install dependencies.
-
-```sh
-make setup
-```
-
-## ⚡️ Running the application
-
-```sh
-make run
-```
-
-## ✨ Linters and Formatters
-
-Check for linting rule violations:
-
-```sh
-make check
-```
-
-Auto-fix linting violations:
-
-```sh
-make fix
-```
-
-## 🤸‍♀️ Getting Help
-
-```sh
-make
-
-# OR
-
-make help
-```
-
-## 🔧 Common Issues and Fixes
-
-- If you run into any errors with incompatible version of ChromaDB/Sqlite3, refer to [this solution](https://docs.trychroma.com/troubleshooting#sqlite).
+## 📝 Note
+The system includes a re-ranking feature using CrossEncoder that can be implemented for improved result relevance.
