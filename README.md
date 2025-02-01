@@ -60,4 +60,6 @@ The system includes a re-ranking feature using CrossEncoder that can be implemen
 
 ## Example 
 ![image](https://github.com/user-attachments/assets/30cfff9a-ba83-42fa-a905-a8b655797486)
+![image](https://github.com/user-attachments/assets/a1c12673-29e7-45ad-881b-466e109cc015)
+
 
