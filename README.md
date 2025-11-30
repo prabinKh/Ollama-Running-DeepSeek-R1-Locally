@@ -1,5 +1,5 @@
 # Ollama-Running-DeepSeek-R1-Locally
-
+ 
 
 # RAG-Based Document Q&A System
 
